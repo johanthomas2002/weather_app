@@ -8,7 +8,7 @@ function Header() {
        
         <Navbar expand="lg" className="bg-success">
             <Container>
-            <Navbar.Brand href="#" className='text-white fs-3'>Weather App</Navbar.Brand>
+            <Navbar.Brand href="#" className='text-white fs-3'><i class="fa-solid fa-cloud"></i> Weather App</Navbar.Brand>
             </Container>
         </Navbar>
         
