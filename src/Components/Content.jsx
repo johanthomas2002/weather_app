@@ -14,7 +14,7 @@ function Content() {
       const data = await response.json(); // Add await here
       setWeather(data);
     }
-  };
+  }
 
   return (
     <div>
@@ -31,14 +31,16 @@ function Content() {
         </div>
       </div>
 
-      <div className="container w-25 bg-warning mt-5 p-5">
+
+      {/* To display the retrieved data */}
+      <div className="container mt-5 p-5 d-flex justify-content-center">
         <Card style={{ width: '18rem', backgroundColor: "black" }}>
           <ListGroup variant="flush">
             {weather.current ? (
               <>
-                <ListGroup.Item className='fs-5'>Temperature: {weather.current.temp_c} °C</ListGroup.Item>
-                <ListGroup.Item className='fs-5'>Feels Like: {weather.current.feelslike_c} °C</ListGroup.Item>
-                <ListGroup.Item className='fs-5'>Humidity: {weather.current.humidity} %</ListGroup.Item>
+                <ListGroup.Item className='fs-5 text-center'>Temperature: {weather.current.temp_c} °C</ListGroup.Item>
+                <ListGroup.Item className='fs-5 text-center'>Feels Like: {weather.current.feelslike_c} °C</ListGroup.Item>
+                <ListGroup.Item className='fs-5 text-center'>Humidity: {weather.current.humidity} %</ListGroup.Item>
               </>
             ) : (
               <ListGroup.Item className='fs-5'>No weather data available</ListGroup.Item>
